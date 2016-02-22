@@ -23,10 +23,10 @@ So far, we've used variables to store information. For example, I could create a
 What if my boss, Headmaster Dumbledore, asks me to deliver the names of all of my students? I could create a bunch of variables like this:
 
 ```ruby
-student1 = "Harry Potter"
-student2 = "Ron Weasley"
-student3 = "Hermione Granger"
-student4 = "Draco Malfoy"
+var student1 = "Harry Potter"
+var student2 = "Ron Weasley"
+var student3 = "Hermione Granger"
+var student4 = "Draco Malfoy"
 
 etc...
 ```
@@ -42,7 +42,7 @@ An array is like a list but in code form. It is a way for your program to store 
 Arrays are declared by listing variable names or literals separated by commas (`,`) and wrapped in square brackets `[``]`. To save our four students from above into an array, we write that in our code like this:
 
 ```javascript
-students = ["Harry Potter", "Ron Weasley", "Hermione Granger", "Draco Malfoy"]
+var students = ["Harry Potter", "Ron Weasley", "Hermione Granger", "Draco Malfoy"]
 ```
 
 ## Why Use Arrays
