@@ -79,7 +79,7 @@ The Array constructor is another approach to making a new JavaScript array.
 var evenNumbers = new Array();
 ```
 
-+ In array.js, define a function called `createArray`. The function does not need to accept an argument, but should return an array of the strings `snickers`, `hundred grand`, `kitkat`, and `skittles`.
++ **You Do:** In array.js, define a function called `createArray`. The function does not need to accept an argument, but should return an array of the strings `snickers`, `hundred grand`, `kitkat`, and `skittles`.
 
 ## Adding an Element
 
@@ -109,7 +109,7 @@ evenNumbers[3] = 8;
 Notice that since we didn't tell JavaScript what value we wanted the third element to have, it defaulted to `undefined`.
 
 
-+ Define a function `addElementToArray`, that accepts an array as a parameter. The function should  add `"A Christmas Story"` to the end of the array. The function should return the entire array.
++ **You Do:** Define a function `addElementToArray`, that accepts an array as a parameter. The function should  add `"A Christmas Story"` to the end of the array. The function should return the entire array.
 
 ## Accessing an Element
 
@@ -129,20 +129,20 @@ console.log(entrepreneurs[2] + bio);
 entrepreneurs[9];
 ```
 
-+ Define a function `accessElementFromArray`. The function should accept an array of states as an argument and return the third item in the array.
++ **You Do:** Define a function `accessThirdElementFromArray`. The function should accept an array of states as an argument and return the third item in the array.
 
 ## Replacing an Element
 
 Say you have an array of author names, and you would like to replace the second element, J. D. Salinger, with the string "Harper Lee". Since the second element has an index of 1, you simply reassign using the index number:
 
 ```javascript
-var authors = ["ray bradbury", "j. d. salinger", "maya angelou"];
+var authors = ["Ray Bradbury", "J. D. Salinger", "Maya Angelou"];
 
-authors[1] = "harper lee";
-// authors is now ["ray bradbury", "harper lee", "maya angelou"];
+authors[1] = "Harper Lee";
+// authors is now ["Ray Bradbury", "Harper Lee", "Maya Angelou"];
 ```
 
-+ Define a function `replaceElementInArray` which should accept an array of names as an argument. The function should replace the second item in the array with `"Carter"`. The function should return the replaced item from the array.
++ **You Do:** Define a function `replaceElementInArray` which should accept an array of names as an argument. The function should replace the second item in the array with `"Carter"`. The function should return the modified array.
 
 ## Removing an Element
 
@@ -174,11 +174,11 @@ var removedFishes = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 // removedFishes is ['angel', 'clown']
 ```
 
-+ Define a function `removeElementFromArray` that take an array of dishes as a parameter. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
++ **You Do:** Define a function `removeElementFromArray` that take an array of dishes as a parameter. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
 
 ## Iteration
 
-JavaScript's `forEach` function will help you to iterate - repeat an action - through an array. The forEach method executes a provided function once per array element. T
+JavaScript's `forEach` function will help you to iterate - repeat an action - through an array. The forEach method executes a provided function once per array element.
 
 The first argument in the example function below is the variable name for currentValue, letter. 
 
@@ -219,7 +219,7 @@ letters.forEach(function(letter, index) {
 // 8. s
 ```
 
-+ Write a function `iterateArray` that accepts an array of numbers as a parameter. The body should also contain an empty array, stored in the variable `newNums`. You should iterate over the array of numbers, add 5 to each number, and store the larger number in the array `newNums`. The function should return the `newNums` array.
++ **You Do:** Write a function `iterateArray` that accepts an array of numbers as a parameter. The body should also contain an empty array, stored in the variable `newNums`. You should iterate over the array of numbers, add 5 to each number, and store the larger number in the array `newNums`. The function should return the `newNums` array.
 
 
 ## Resources
