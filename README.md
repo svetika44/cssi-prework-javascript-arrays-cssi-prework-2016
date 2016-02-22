@@ -14,9 +14,46 @@
 
 You'll be coding along in `array.js`. There are tests to run to make sure you're on the right track.
 
+## What is an Array?
+
+An array is like a basket––it is a container for a collection of data. Let's take a closer look with the help of the following example.
+
+So far, we've used variables to store information. For example, I could create a variable called `my_name` and set it equal to my name: `my_name = "Severus Snape"`. However, variables only allow us to store one piece of information at a time.
+
+What if my boss, Headmaster Dumbledore, asks me to deliver the names of all of my students? I could create a bunch of variables like this:
+
+```ruby
+student1 = "Harry Potter"
+student2 = "Ron Weasley"
+student3 = "Hermione Granger"
+student4 = "Draco Malfoy"
+
+etc...
+```
+
+Then, I could write a program that passes around these variables *one at a time*. This seems messy though. I could easily forget about a student, for example. Or need to create a new student and then have to hunt through my program for every place I ever passed around all of these individual variables.
+
+If this was real life, Professor Snape would probably just write down all the students in list form and hand that list to Dumbledore. In Javascript, we can do the same thing using an array.
+
+### Array Definition
+
+An array is like a list but in code form. It is a way for your program to store pieces of data as a *collection*. Arrays can contain any data types in any combination––strings, integers, other arrays, hashes, etc.
+
+Arrays are declared by listing variable names or literals separated by commas (`,`) and wrapped in square brackets `[``]`. To save our four students from above into an array, we write that in our code like this:
+
+```javascript
+students = ["Harry Potter", "Ron Weasley", "Hermione Granger", "Draco Malfoy"]
+```
+
+## Why Use Arrays
+
+Arrays store information in list form. It's hard to imagine a program you will write in which you *won't* be dealing with collections of data. Whether you're making a command line game or writing a large-scale web application with many users, data is the name of the game. You may need to list the players of your game and their scores, you may need to list the users of your application. You might have an application that connects doctors and their patients and therefore lists the patients of an individual doctor. This list goes on (pun intended).
+
+Arrays allow us to store a collection of information in one organized place. Arrays can be named, i.e. set equal to a variable, and we can access data from an array, add data to an array or change the data that is already stored in an array.
+
 ## Creation
 
-JavaScript arrays can contain any types of values and they can be of mixed types, just like in Ruby. You can create arrays in two different ways, the most common of which is to list values in a pair of square brackets. These are called array literals. 
+You can create arrays in two different ways, the most common of which is to list values in a pair of square brackets. These are called array literals.
 
 Syntax:
 
@@ -42,11 +79,11 @@ The Array constructor is another approach to making a new JavaScript array.
 var evenNumbers = new Array();
 ```
 
-+ Define a function called `createArray`. The function does not need to accept an argument, but should return an array of the strings `snickers`, `hundred grand`, `kitkat`, and `skittles`.
++ In array.js, define a function called `createArray`. The function does not need to accept an argument, but should return an array of the strings `snickers`, `hundred grand`, `kitkat`, and `skittles`.
 
 ## Adding an Element
 
-Ruby has two ways to add elements to the end of the array, `push` and `<<`. You're probably more familiar with the latter which is also known as the shovel method. JavaScript doesn't have the shovel method, but like Ruby, it does feature a push method. Take a look at the code below:
+To add elements to the end of the array, you can use the array method `push`. Take a look at the code below:
 
 ```javascript
 var superheroines = ["catwoman", "she-hulk", "mystique"];
@@ -76,7 +113,7 @@ Notice that since we didn't tell JavaScript what value we wanted the third eleme
 
 ## Accessing an Element
 
-You can get elements out of arrays if you know their index. Just like in Ruby, array elements' indexes start at 0 and increment by 1, so the first element's index is 0, the second element's index is 1, the third element's is 2, etc.
+You can get elements out of arrays if you know their index. Just like with strings, array elements' indexes start at 0 and increment by 1, so the first element's index is 0, the second element's index is 1, the third element's is 2, etc.
 
 ```javascript
 var entrepreneurs = ["Elizabeth Holmes", "Laurene Powell Jobs", "Arianna Huffington"];
@@ -96,7 +133,7 @@ entrepreneurs[9];
 
 ## Replacing an Element
 
-Replacing the value of an element in a JavaScript array is very similar to the equivalent in Ruby. Say you have an array of author names, and you would like to replace the second element, J. D. Salinger, with the string "Harper Lee". Since the second element has an index of 1, you simply reassign using the index number:
+Say you have an array of author names, and you would like to replace the second element, J. D. Salinger, with the string "Harper Lee". Since the second element has an index of 1, you simply reassign using the index number:
 
 ```javascript
 var authors = ["ray bradbury", "j. d. salinger", "maya angelou"];
@@ -137,11 +174,13 @@ var removedFishes = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 // removedFishes is ['angel', 'clown']
 ```
 
-+ Define a function `removeElementFromArray` that take an array of dishes as a paramet. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
++ Define a function `removeElementFromArray` that take an array of dishes as a parameter. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
 
 ## Iteration
 
-JavaScript's `forEach` function will help you to iterate through an array. The forEach method executes a provided function once per array element. The first argument that this provided function needs is the variable name for currentValue. In Ruby, this value is typically seen inside of the double pipes (ex. `letters.each do |letter|`).
+JavaScript's `forEach` function will help you to iterate - repeat an action - through an array. The forEach method executes a provided function once per array element. T
+
+The first argument in the example function below is the variable name for currentValue, letter. 
 
 ```javascript
 var letters = ["z", "y", "x", "w", "v", "u", "t", "s"];
@@ -160,7 +199,7 @@ letters.forEach(function(letter) {
 // ♫ s ♬
 ```
 
-Like Ruby's `.each_with_index` method, you can also instruct JavaScript to keep track of the index number of the element it is currently on. To do this, pass the provided function a second argument:
+You can also instruct JavaScript to keep track of the index number of the element it is currently on. To do this, pass the provided function a second argument, index:
 
 ```javascript
 var letters = ["z", "y", "x", "w", "v", "u", "t", "s"];
@@ -187,5 +226,3 @@ letters.forEach(function(letter, index) {
 
 * [MDN - Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 * [Codecademy - Arrays](http://www.codecademy.com/glossary/javascript)
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-arrays.js' title='JavaScript Arrays'>JavaScript Arrays</a> on Learn.co and start learning to code for free.</p>
