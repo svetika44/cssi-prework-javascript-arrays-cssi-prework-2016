@@ -16,7 +16,7 @@ You'll be coding along in `array.js`. There are tests to run to make sure you're
 
 ## What is an Array?
 
-An array is like a basket––it is a container for a collection of data. Let's take a closer look with the help of the following example.
+An array is like a basket––it is a container for a collection of data. An array is an ordered list that can contain more than one piece of data, called an element.
 
 So far, we've used variables to store information. For example, I could create a variable called `my_name` and set it equal to my name: `my_name = "Severus Snape"`. However, variables only allow us to store one piece of information at a time.
 
@@ -43,6 +43,11 @@ Arrays are declared by listing variable names or literals separated by commas (`
 
 ```javascript
 var students = ["Harry Potter", "Ron Weasley", "Hermione Granger", "Draco Malfoy"]
+```
+
+Remember that arrays can be of mixed data type and even include other arrays.
+```
+var mixedArray = [12, true, "Cards Against Humanity", 343, ["a","b","z"]]
 ```
 
 ## Why Use Arrays
@@ -177,46 +182,57 @@ var removedFishes = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 + **You Do:** Define a function `removeElementFromArray` that take an array of dishes as a parameter. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
 
 ## Iteration
+Arrays are the first of two data structures you will learn about that store more than one element. Usually you will want to repeat an action upon every element in these collections. In programming, this repetition is called iteration. You will learn how to construct three different types of loops for more general iteration.  
 
-JavaScript's `forEach` function will help you to iterate - repeat an action - through an array. The forEach method executes a provided function once per array element.
+Arrays have their own iteration function,`forEach`. The forEach method executes a provided function once per array element.
 
-The first argument in the example function below is the variable name for currentValue, letter. 
+The general syntax is below.
 
-```javascript
-var letters = ["z", "y", "x", "w", "v", "u", "t", "s"];
-
-letters.forEach(function(letter) {
-  console.log("♫ " + letter + " ♬");
+```js
+myArray.forEach(function(myItem)){
+  //do something to myItem
 });
-// this will print the following to the console:
-// ♫ z ♬
-// ♫ y ♬
-// ♫ x ♬
-// ♫ w ♬
-// ♫ v ♬
-// ♫ u ♬
-// ♫ t ♬
-// ♫ s ♬
+```
+One of the biggest misunderstanding your students will have is the name of the local variable myItem. Usually, that variable is just the singular name of the array, but because it is a local variable, it can be named ANYTHING. In fact, it's often good to mix up the names of your variables so that students can clearly see their scope.
+
+
+For example, let's day we have a bunch of musical notes that we want to print to the console.
+```javascript
+var notes = ["B", "C", "C", "A", "D", "E"];
 ```
 
-You can also instruct JavaScript to keep track of the index number of the element it is currently on. To do this, pass the provided function a second argument, index:
+We simply have to use the array method forEach and pass it an unnamed function the describes what we want to do.
 
 ```javascript
-var letters = ["z", "y", "x", "w", "v", "u", "t", "s"];
+notes.forEach(function(letter) {
+  console.log("♫ " + letter + " ♬");
+});
 
-letters.forEach(function(letter, index) {
-  var number = index + 1;
-  console.log(number + ". " + letter);
+// this will print the following to the console:
+// ♫ B ♬
+// ♫ C ♬
+// ♫ C ♬
+// ♫ A ♬
+// ♫ D ♬
+// ♫ E ♬
+```
+
+
+You can also instruct JavaScript to keep track of the index number of the element it is currently on. To do this, pass the provided function a second argument, index. Again this second argument can be named anything, it's a local variable.
+
+```javascript
+var inviteResponses=["yes", "yes", "idk", "no way", "who are you"]
+
+inviteResponses.forEach(function(answer, index) {
+  var number = index + 1; //add one initially so you don't start counting at 0!
+  console.log(number + ". " + answer);
 });
 // this will print the following to the console:
-// 1. z
-// 2. y
-// 3. x
-// 4. w
-// 5. v
-// 6. u
-// 7. t
-// 8. s
+// 1. yes
+// 2. yes
+// 3. idk
+// 4. no way
+// 5. who are you
 ```
 
 + **You Do:** Write a function `iterateArray` that accepts an array of numbers as a parameter. The body should also contain an empty array, stored in the variable `newNums`. You should iterate over the array of numbers, add 5 to each number, and store the larger number in the array `newNums`. The function should return the `newNums` array.
