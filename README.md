@@ -182,9 +182,7 @@ var removedFishes = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 + **You Do:** Define a function `removeElementFromArray` that take an array of dishes as a parameter. The function should remove the third and fourth item from the array, and adds "Roast Chicken" to the end, using the `splice` function. The function should return the updated array.
 
 ## Iteration
-Arrays are the first of two data structures you will learn about that store more than one element. Usually you will want to repeat an action upon every element in these collections. In programming, this repetition is called iteration. You will learn how to construct three different types of loops for more general iteration.  
-
-Arrays have their own iteration function,`forEach`. The forEach method executes a provided function once per array element.
+Arrays are the first of two data structures you will learn about that store more than one element. Usually you will want to repeat an action upon every element in these collections. In programming, this repetition is called iteration. In subsequent sections, you will learn how to construct three different types of loops for more general iteration. For now, we can use an arrays specific iteration function,`forEach`. The forEach method executes an unnamed function (called a callback function) once per array element.
 
 The general syntax is below.
 
@@ -201,7 +199,7 @@ For example, let's day we have a bunch of musical notes that we want to print to
 var notes = ["B", "C", "C", "A", "D", "E"];
 ```
 
-We simply have to use the array method forEach and pass it an unnamed function the describes what we want to do.
+We simply have to use the array method `forEach()` and pass in an unnamed function the describes what we want to do to each element, which in this case is stored in the variable letter.
 
 ```javascript
 notes.forEach(function(letter) {
@@ -218,7 +216,7 @@ notes.forEach(function(letter) {
 ```
 
 
-You can also instruct JavaScript to keep track of the index number of the element it is currently on. To do this, pass the provided function a second argument, index. Again this second argument can be named anything, it's a local variable.
+You can also instruct JavaScript to keep track of the index number of the element it is currently on. To do this, pass the callback function a second argument, index. Again this second argument can be named anything, it's a local variable, although using index or just i for short is a good habit to get into.
 
 ```javascript
 var inviteResponses=["yes", "yes", "idk", "no way", "who are you"]
