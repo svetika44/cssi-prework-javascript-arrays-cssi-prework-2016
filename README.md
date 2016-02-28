@@ -97,12 +97,12 @@ superheroines.push("wonder woman");
 // superheroines is now ["catwoman", "she-hulk", "mystique", "wonder woman"]
 ```
 
-To add elements to an array at specific indexes, you use the bracket equals notation. This notation will also work for replacing values.
+To add elements to an array at specific indexes, you use the "bracket equals" notation. This notation will also work for replacing values.
 
 Let's add three elements to our empty `evenNumbers` array. First, decide what index you want your element to have (remember the first element in an array has an index of 0). Then you wrap this desired index in brackets, place the array's variable name directly to the left. Remember to place an equal sign to the right of the closing square bracket, and put the value that you want your element to have after the equal sign.
 
 ```javascript
-var evenNumbers = new Array();
+var evenNumbers = new Array(); // remember, this is the same as: var evenNumbers = [];
 
 evenNumbers[0] = 2;
 evenNumbers[1] = 4;
